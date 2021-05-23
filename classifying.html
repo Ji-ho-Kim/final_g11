@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buttons</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" ontent="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+        <title>Mat-zip</title>
+        <style>
+            * { font-family: 'Nanum Pen Script', cursive; }
+            table {
+                margin: 0 auto;
+                text-align: center;
+                border-collapse: collapse;
+                border: 1px solid gainsboro;
+            }
+            tr {
+                background: whitesmoke;
+            }
+            th, td {
+                padding: 10px 30px;
+            }
+            th {
+                border-bottom: 1px solid whitesmoke;
+            }
+            tbody {
+                background: whitesmoke;
+            }
+        </style>
+    </head>
+  
+    <body>
+        <nav class="navbar navbar-light bg-light">
+		    <div class="container">
+			    <span class="navbar-brand mb-0 h1"><i class="bi bi-card-checklist"></i> Creating my own to-go restaurant list</span>
+		    </div>
+	    </nav>
+        <div class="d-flex">
+            <div class="container">
+                
+                <div class="col-md-auto text-center mb-2 mt-2">
+                    <hr>
+                    <input type="file" id="excelFile" onchange="excelExport(event)"/>
+                    <input type="text" id="mykeyword" placeholder="유형을 입력하세요">
+                    <br>
+                    <hr>
+                    <div id="displayExcelHtml"></div>
+                </div>
+            </div>
+            
+            <div class="flex-grow-1 bg-light rounded-2 p-2 w-50">
+                <h3>My picks</h3>
+                <div class="d-flex align-items-center mb-2 mt-2">
+			    <input onkeyup="enterkey();"type="text" class="form-control" id="task-input" placeholder="Which restaurant?">
+			    <button type="button" id="add" class="btn btn-primary ms-1 text-nowrap"><i class="bi bi-plus"></i>
+				Add</button>
+		        </div>
+                
+				<div id="todo-list">
+					<div class="task bg-light p-1 rounded-2 ps-2 d-flex align-items-center">
+					</div>
+				</div>
+            </div>
+        </div>
+    
+    <script>
+        let tasks = [];
+
+		function loadTasks() {
+			let lastTasks = localStorage.getItem("tasks");
+			if (!lastTasks) return;
+
+			tasks = JSON.parse(lastTasks);
+			tasks.forEach(addToList);
+		}
+
+		function saveTasks() {
+			localStorage.setItem("tasks", JSON.stringify(tasks));
+		}
+
+        function addToList(task) {
+			let div = document.createElement("div");
+			div.className = "task bg-light p-1 rounded-2 ps-2 d-flex align-items-center";
+
+			let span = document.createElement("span");
+			span.className = "me-auto";
+			span.textContent = task.text;
+			div.appendChild(span);
+
+			let buttonRemove = document.createElement("button");
+			buttonRemove.className = "btn btn-sm btn-danger";
+			buttonRemove.innerHTML = '<i class="bi bi-x"></i>';
+			div.appendChild(buttonRemove);
+
+			buttonRemove.addEventListener("click", () => {
+				div.remove();
+				tasks = tasks.filter(t => t !== task);
+				saveTasks();
+			});
+
+			let list = document.querySelector("#todo-list");
+			list.appendChild(div);
+		}
+
+        window.addEventListener("load", () => {
+			loadTasks();
+		});
+
+		let button = document.querySelector("#add");
+		button.addEventListener("click", () => {
+			// 1. Read the text in #task-input.
+			let input = document.querySelector("#task-input");
+			let text = input.value;
+
+			if (!text.length) return;
+
+			// 2. Create a new Task object.
+			let task = {
+				text: text,
+			};
+
+			// 3. Append the new Task object to tasks						
+			tasks.push(task);
+			saveTasks();
+
+			// 4. Create a new task item and attach it to #todo-list.
+			addToList(task);
+
+			// 5. Clear #task-input.
+			input.value = "";
+		});
+
+        function enterkey(){
+            if(window.event.keyCode==13){
+                // 1. Read the text in #task-input.
+			    let input = document.querySelector("#task-input");
+			    let text = input.value;
+
+			    if (!text.length) return;
+
+			    // 2. Create a new Task object.
+			    let task = {
+				    text: text,
+			    };
+
+			    // 3. Append the new Task object to tasks						
+			    tasks.push(task);
+			    saveTasks();
+
+			    // 4. Create a new task item and attach it to #todo-list.
+			    addToList(task);
+
+			    // 5. Clear #task-input.
+			    input.value = "";
+            }
+        };
+
+
+        $(document).ready(function() {
+            $("#mykeyword").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("table > tbody > tr").hide();
+                var temp = $("table > tbody > tr > td:nth-child(5n+4):contains('" + value + "')");
+                $(temp).parent().show();
+            });
+        });
+        $(document).ready(function() {
+            var name = $('h1').find('span.textCity');
+            $("table > tbody > tr").hide();
+            var temp = $("table > tbody > tr > td:nth-child(5n+1):contains('" + name + "')");
+            $(temp).parent().show();
+        });
+        $.ajax({
+            url: 'csv_data.csv',
+            dataType: 'text',
+        }).done(Table);
+        function excelExport(event){
+            excelExportCommon(event, handleExcelDataAll);
+        }
+        function excelExportCommon(event, callback){
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function() {
+                var fileData = reader.result;
+                var wb = XLSX.read(fileData, {type : 'binary'});
+                var sheetNameList = wb.SheetNames;
+                var firstSheetName = sheetNameList[0];
+                var firstSheet = wb.Sheets[firstSheetName];
+                callback(firstSheet);
+            };
+            reader.readAsBinaryString(input.files[0]);
+        }
+        function handleExcelDataAll(sheet){
+            handleExcelDataHtml(sheet);
+        }
+        function handleExcelDataHtml(sheet){
+            $("#displayExcelHtml").html(XLSX.utils.sheet_to_html(sheet));
+        }
+        function get_header_row(sheet) {
+            var headers = [];
+            var range = XLSX.utils.decode_range(sheet['!ref']);
+            var C, R = range.s.r;
+            for(C = range.s.c; C <= range.e.c; ++C) {
+                var cell = sheet[XLSX.utils.encode_cell({c:C, r:R})]
+                var hdr = "UNKNOWN " + C;
+                if(cell && cell.t) hdr = XLSX.utils.format_cell(cell);
+                    headers.push(hdr);
+            }
+            return headers;
+        }
+        function Table(data) {
+            var allRows = data.split(/\r?\n|\r/);
+            var table = document.createElement("table");
+            table.className = "myTable";
+            for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+                if (singleRow === 0) {
+                    var thead = document.createElement("thead");
+                    var tr = document.createElement('tr');
+                    table.appendChild(thead);
+                    thead.appendChild(tr);
+                } else {
+                    var tr = document.createElement('tr');
+                    thead.appendChild(tr);
+                }
+                var rowCells = allRows[singleRow].split(',');
+                for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+                    if (singleRow === 0) {
+                        var th = document.createElement("th");
+                        th.innerHTML = rowCells[rowCell];
+                        tr.appendChild(th);
+                    } else {
+                        var td = document.createElement("td");
+                        td.innerHTML = rowCells[rowCell];
+                        tr.appendChild(td);
+                    }
+                }
+                if (singleRow === 0) {
+                    var tbody = document.createElement("tbody");
+                    table.className = "myTable_tbody";
+                    table.appendChild(tbody);
+                }
+            }
+            document.body.appendChild(table);
+        }
+        
+    </script>
+    </body>
+</html>
