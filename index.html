@@ -162,6 +162,7 @@
                 var value = $(this).val().toLowerCase();
                 var find = $("table > tbody > tr > td:nth-child(5n+4):contains('" + value + "')");
                 $(find).parent().show();
+                $("table > tbody > tr > td:nth-child(5n+1):not(:contains('" + name + "'))").parent().hide();
             });
         }
 
