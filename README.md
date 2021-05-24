@@ -17,7 +17,7 @@ Crawled data are stored in **Excel(.xlsx)** file.
 
 When a user clicks on the button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
 Simply click on the section of the map above to see the results categorized by region.
-Or enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by the type of restaurant.
+Then, enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by the type of restaurant.
 
 준혁
 
