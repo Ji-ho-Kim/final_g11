@@ -15,9 +15,11 @@ The crawled four items are as follows:
 Crawled data are stored in **Excel(.xlsx)** file.
 (We excluded restaurants that don't have a rating.)
 
-When a user clicks on the button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
-Simply click on the section of the map above to see the results categorized by region.
-Then, enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by the type of restaurant.
+When a user clicks on the '파일 열기' button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
+
+Simply click on the section of the image that corresponds to the borough above to see the results categorized by borough.
+
+Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by restaurant type.
 
 준혁
 
@@ -53,8 +55,13 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 
 ## Short demo video link
 
--   https://www.youtube.com/watch?v=f5eYgoCO5Ws
--   https://www.youtube.com/watch?v=-5eOaU17v1Y
+- Making my own list by taking a look at restaurants in all of Seoul
+
+   https://www.youtube.com/watch?v=-5eOaU17v1Y
+
+- Making my own list by taking a look at restaurants within the selected borough
+
+    https://www.youtube.com/watch?v=f5eYgoCO5Ws
 
 ## Installation
 
@@ -70,6 +77,20 @@ You can download the excel file from this git repo and use it, but if you want t
     6. As the homepage of mangoplate comes up, you need to click the popup manually to crawl normally
     7. Check the excel file!
 
+## Code of Conduct
+
+- If you want to see the list of restaurants in all of Seoul
+```
+1. Click '파일 열기' button.
+2. Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트".
+ ```       
+- If you want to see the list of restaurants within the selected borough by restaurant type
+```
+1. Click '파일 열기' button.
+2. Click on the image section that corresponds to the borough.
+3. Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트".
+```
+
 ## API reference
 
 ## Examples
@@ -80,6 +101,4 @@ You can download the excel file from this git repo and use it, but if you want t
 
 ## License
 
-MIT license
-
-## Code of Conduct
+    MIT license
