@@ -3,8 +3,11 @@
 ## Brief overview
 
 This is ossc final project of Group 11.
+<br>
 The name of our project is **"Creating my own to-go restaurant list"**.
+<br>
 By crawling data of one hundred data for each of the 25 boroughs in Seoul from _MangoPlate_(망고플레이트), Korea's trusted restaurant review site.
+<br><br>
 The crawled four items are as follows:
 
     1. the borough which the restaurant belongs
@@ -13,14 +16,17 @@ The crawled four items are as follows:
     4. restaurant type (Korean, Chinese, Western...)
 
 Crawled data are stored in **Excel(.xlsx)** file.
+<br>
 (We excluded restaurants that don't have a rating.)
 
 To start, when a user clicks on "파일 선택" button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
+<br>
 Simply click on the section of the map above that you want to visit to see the results categorized by borough.
+<br>
 Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by restaurant type.
-
+<br>
 Finally, you can add the restaurant that you want to go to the list and manage your own list.
-
+<br><br>
 **Whenever you are wondering which restaurant to go to, visit this website and check your list! :)**
 
 ## Link of resources
