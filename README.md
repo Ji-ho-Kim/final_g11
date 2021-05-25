@@ -38,7 +38,7 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 -   https://eblo.tistory.com/83
 -   https://code.tutsplus.com/ko/tutorials/parsing-a-csv-file-with-javascript--cms-25626
 
-3. making my own list
+4. making my own list
 
 -   https://github.com/e-/skku-todo-2.git
 
