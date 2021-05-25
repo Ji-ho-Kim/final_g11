@@ -16,13 +16,12 @@ Crawled data are stored in **Excel(.xlsx)** file.
 (We excluded restaurants that don't have a rating.)
 
 To start, when a user clicks on "파일 선택" button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
-To see the results categorized by region, you can simply click on the section of the map above that you want to visit.
-
-Then, enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by the type of restaurant.
+Simply click on the section of the map above that you want to visit to see the results categorized by borough.
+Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by restaurant type.
 
 Finally, you can add the restaurant that you want to go to the list and manage your own list.
 
-Whenever you are wondering which restaurant to go to, visit this website and check your list! :)
+**Whenever you are wondering which restaurant to go to, visit this website and check your list! :)**
 
 ## Link of resources
 
@@ -41,7 +40,54 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 
 -   https://woodstar.tistory.com/124
 
+4. making my own list
+
+-   https://github.com/e-/skku-todo-2.git
+
+## Screenshots of the web page
+
+<img width="565" alt="test6" src="https://user-images.githubusercontent.com/79782180/119431221-25d85c80-bd4d-11eb-93a3-1e31302d283b.PNG">
+<img width="960" alt="test3" src="https://user-images.githubusercontent.com/79782180/119431073-e3168480-bd4c-11eb-8802-735b1b3ff4fc.PNG">
+<img width="947" alt="test4" src="https://user-images.githubusercontent.com/79782180/119431076-e447b180-bd4c-11eb-9ee1-da704c10870b.PNG">
+<img width="948" alt="test5" src="https://user-images.githubusercontent.com/79782180/119431079-e447b180-bd4c-11eb-9535-3fb1d11829c9.PNG">
+
+## Short demo video link
+
+- Making my own list by taking a look at restaurants in all of Seoul
+
+   https://www.youtube.com/watch?v=-5eOaU17v1Y
+
+- Making my own list by taking a look at restaurants within the selected borough
+
+    https://www.youtube.com/watch?v=f5eYgoCO5Ws
+
 ## Installation
+
+**CRAWL**
+
+You can download the excel file from this git repo and use it, but if you want to do crawling on your own:
+
+    1. Download CRAWL.py, seoul.txt, chromedriver.exe
+    2. Edit seoul_file_path in CRWAL.py to your file path
+    3. Edit chrome_driver_path in CRWAL.py to your file path
+    4. Do 'pip install selenium' on command line
+    5. Run CRAWL.py
+    6. As the homepage of mangoplate comes up, you need to click the popup manually to crawl normally
+    7. Check the excel file!
+
+## Code of Conduct
+
+- If you want to see the list of restaurants in all of Seoul
+```
+1. Click '파일 열기' button.
+2. Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트".
+ ```       
+- If you want to see the list of restaurants within the selected borough by restaurant type
+```
+1. Click '파일 열기' button.
+2. Click on the image section that corresponds to the borough.
+3. Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트".
+```
 
 ## API reference
 
@@ -53,6 +99,4 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 
 ## License
 
-MIT license
-
-## Code of Conduct
+    MIT license
