@@ -15,11 +15,10 @@ The crawled four items are as follows:
 Crawled data are stored in **Excel(.xlsx)** file.
 (We excluded restaurants that don't have a rating.)
 
-When a user clicks on the button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
-Simply click on the section of the map above to see the results categorized by region.
-Then, enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by the type of restaurant.
+To start, when a user clicks on "파일 선택" button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
+To see the results categorized by region, you can simply click on the section of the map above that you want to visit.
 
-준혁
+Then, enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by the type of restaurant.
 
 Finally, you can add the restaurant that you want to go to the list and manage your own list.
 
@@ -38,7 +37,9 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 -   https://eblo.tistory.com/83
 -   https://code.tutsplus.com/ko/tutorials/parsing-a-csv-file-with-javascript--cms-25626
 
-3. 준혁님
+3. mapping by region
+
+-   https://woodstar.tistory.com/124
 
 ## Installation
 
