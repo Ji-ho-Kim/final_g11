@@ -38,7 +38,23 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 -   https://eblo.tistory.com/83
 -   https://code.tutsplus.com/ko/tutorials/parsing-a-csv-file-with-javascript--cms-25626
 
+3. making my own list
+
+-   https://github.com/e-/skku-todo-2.git
+
 3. 준혁님
+
+## Screenshots of the web page
+
+<img width="565" alt="test6" src="https://user-images.githubusercontent.com/79782180/119431221-25d85c80-bd4d-11eb-93a3-1e31302d283b.PNG">
+<img width="960" alt="test3" src="https://user-images.githubusercontent.com/79782180/119431073-e3168480-bd4c-11eb-8802-735b1b3ff4fc.PNG">
+<img width="947" alt="test4" src="https://user-images.githubusercontent.com/79782180/119431076-e447b180-bd4c-11eb-9ee1-da704c10870b.PNG">
+<img width="948" alt="test5" src="https://user-images.githubusercontent.com/79782180/119431079-e447b180-bd4c-11eb-9535-3fb1d11829c9.PNG">
+
+## Short demo video link
+
+-   https://www.youtube.com/watch?v=f5eYgoCO5Ws
+-   https://www.youtube.com/watch?v=-5eOaU17v1Y
 
 ## Installation
 
