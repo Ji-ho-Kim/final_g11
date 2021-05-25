@@ -62,10 +62,10 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 
 You can download the excel file from this git repo and use it, but if you want to do crawling on your own:
 
-    1. Download CRAWL.py, seoul.txt
-    2. Edit seoul_file_path on CRWAL.py to your file path
-    3. Do 'pip install selenium' on command line
-    4. Download chromedriver.exe
+    1. Download CRAWL.py, seoul.txt, chromedriver.exe
+    2. Edit seoul_file_path in CRWAL.py to your file path
+    3. Edit chrome_driver_path in CRWAL.py to your file path
+    4. Do 'pip install selenium' on command line
     5. Run CRAWL.py
     6. As the homepage of mangoplate comes up, you need to click the popup manually to crawl normally
     7. Check the excel file!
