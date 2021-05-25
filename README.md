@@ -15,17 +15,13 @@ The crawled four items are as follows:
 Crawled data are stored in **Excel(.xlsx)** file.
 (We excluded restaurants that don't have a rating.)
 
-When a user clicks on the '파일 열기' button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
-
-Simply click on the section of the image that corresponds to the borough above to see the results categorized by borough.
-
+To start, when a user clicks on "파일 선택" button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
+Simply click on the section of the map above that you want to visit to see the results categorized by borough.
 Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트" to see the results categorized by restaurant type.
-
-준혁
 
 Finally, you can add the restaurant that you want to go to the list and manage your own list.
 
-Whenever you are wondering which restaurant to go to, visit this website and check your list! :)
+**Whenever you are wondering which restaurant to go to, visit this website and check your list! :)**
 
 ## Link of resources
 
@@ -40,11 +36,13 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 -   https://eblo.tistory.com/83
 -   https://code.tutsplus.com/ko/tutorials/parsing-a-csv-file-with-javascript--cms-25626
 
+3. mapping by region
+
+-   https://woodstar.tistory.com/124
+
 4. making my own list
 
 -   https://github.com/e-/skku-todo-2.git
-
-3. 준혁님
 
 ## Screenshots of the web page
 
