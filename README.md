@@ -59,13 +59,13 @@ Finally, you can add the restaurant that you want to go to the list and manage y
 
 ## Short demo video link
 
-- Making my own list by taking a look at restaurants in all of Seoul
+>Making my own list by taking a look at restaurants in all of Seoul
 
    https://www.youtube.com/watch?v=-5eOaU17v1Y
 
-- Making my own list by taking a look at restaurants within the selected borough
+>Making my own list by taking a look at restaurants within the selected borough
 
-    https://www.youtube.com/watch?v=f5eYgoCO5Ws
+   https://www.youtube.com/watch?v=f5eYgoCO5Ws
 
 ## Installation
 
