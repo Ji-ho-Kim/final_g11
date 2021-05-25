@@ -108,11 +108,11 @@ Then, A should follow the directions below:
 
 ## API reference
 
-In _MangoPlate_(망고플레이트) from which we crawled data, map API of _NAVER_ is used. (https://www.ncloud.com/product/applicationService/maps)
+We directly parsed HTML page and crawled data without utilizing API...
 
 ## Releases (versions)
 
-v1.0.0 (Latest release)
+v1.0.1 (Latest release)
 
 ## How to contribute
 
