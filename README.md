@@ -10,16 +10,16 @@ By crawling data of one hundred data for each of the 25 boroughs in Seoul from _
 <br><br>
 The crawled four items are as follows:
 
-    1. the borough which the restaurant belongs
-    2. restaurant name
-    3. rating by reviewers
-    4. restaurant type (Korean, Chinese, Western...)
+    - the borough which the restaurant belongs
+    - restaurant name
+    - rating by reviewers
+    - restaurant type (Korean, Chinese, Western...)
 
 Crawled data are stored in **Excel(.xlsx)** file.
 <br>
 (We excluded restaurants that don't have a rating.)
 
-To start, when a user clicks on "파일 선택" button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
+To start, when a user clicks on '파일 선택' button and select the downloaded xlsx file, a table appears in which restaurants throughout Seoul have high ratings.
 <br>
 Simply click on the section of the map above that you want to visit to see the results categorized by borough.
 <br>
@@ -83,25 +83,43 @@ You can download the excel file from this git repo and use it, but if you want t
 
 ## Code of Conduct
 
-- If you want to see the list of restaurants in all of Seoul
+- If you want to see the list of restaurants in all of Seoul . . .
 ```
-1. Click '파일 열기' button.
+1. Click on '파일 선택' button.
 2. Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트".
  ```       
-- If you want to see the list of restaurants within the selected borough by restaurant type
+- If you want to see the list of restaurants within the selected borough by restaurant type . . .
 ```
-1. Click '파일 열기' button.
+1. Click on '파일 선택' button.
 2. Click on the image section that corresponds to the borough.
 3. Enter one of the following in the text box: "한식, 양식, 일식, 중식, 디저트".
 ```
 
+## Examples (of screenshots above)
+
+Person A wants to visit '일식'(Japanese) restaurant in '은평구'! <br>
+Then, A should follow the directions below:
+```   
+1. Click '파일 선택' button and select 'Mat-zip-list.xlsx' file
+2. Click on '은평구' of the map above
+3. Enter '일식'(Japanese) in the text box
+4. Add the restaurant that you want to go to your own list!
+```
+
 ## API reference
 
-## Examples
+In _MangoPlate_(망고플레이트) from which we crawled data, map API of _NAVER_ is used. (https://www.ncloud.com/product/applicationService/maps)
 
 ## Releases (versions)
 
+v1.0.0 (Latest release)
+
 ## How to contribute
+
+    1. Fork our repo to your account
+    2. Modify your own repo
+    3. Write pull request
+    4. We will decide whether to approve your pull request or not!
 
 ## License
 
