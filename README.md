@@ -60,7 +60,7 @@ Whenever you are wondering which restaurant to go to, visit this website and che
 
 **CRAWL**
 
-You can download the excel file from this get repo, but if you want to do crawling on your own:
+You can download the excel file from this git repo and use it, but if you want to do crawling on your own:
 
     1. Download CRAWL.py, seoul.txt
     2. Edit seoul_file_path on CRWAL.py to your file path
